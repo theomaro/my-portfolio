@@ -9,6 +9,40 @@ const skills = [
   "Git & GitHub",
 ];
 
+const projects = [
+  {
+    title: "Manage Landing Page",
+
+    description:
+      "A responsive landing page challenge from Frontend Mentor focused on layout structuring, responsive design, and reusable UI sections.",
+
+    tech: ["HTML", "Tailwind CSS", "TypeScript"],
+
+    github: "https://github.com/theomaro/manage-landing-page/",
+    demo: "https://theomaro.github.io/manage-landing-page/",
+
+    image: "./images/projects/manage.png",
+
+    featured: false,
+  },
+
+  {
+    title: "Bookmark Landing Page",
+
+    description:
+      "A responsive product landing page built as a Frontend Mentor challenge with interactive UI sections and responsive layouts.",
+
+    tech: ["HTML", "Tailwind CSS", "TypeScript"],
+
+    github: "https://github.com/theomaro/bookmark-landing-page/",
+    demo: "https://the-bookmark-landing-page.netlify.app/",
+
+    image: "./images/projects/bookmark.png",
+
+    featured: false,
+  },
+];
+
 const courses = [
   {
     title: "Complete Python Mastery",
@@ -42,6 +76,98 @@ skills.forEach((skill) => {
   skillsContainer.innerHTML += `
     <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-blue-500 transition">
       <h3 class="text-lg font-semibold">${skill}</h3>
+    </div>
+  `;
+});
+
+// Projects
+const projectsContainer = document.getElementById("projects-container");
+
+projects.forEach((project) => {
+  const techList = project.tech
+    .map(
+      (tech) => `
+        <span class="bg-gray-800 text-sm px-3 py-1 rounded-full text-gray-300">
+          ${tech}
+        </span>
+      `,
+    )
+    .join("");
+
+  projectsContainer.innerHTML += `
+    <div class="
+      bg-gray-900
+      border
+      ${project.featured ? "border-cyan-500/40" : "border-gray-800"}
+      rounded-3xl
+      overflow-hidden
+      shadow-xl
+      hover:border-cyan-500/50
+      transition
+    ">
+
+      <!-- Project Image -->
+      <img
+        src="${project.image}"
+        alt="${project.title}"
+        class="w-full h-56 object-cover object-top border-b border-gray-800"
+      />
+
+      <!-- Content -->
+      <div class="p-8">
+
+        ${
+          project.featured
+            ? `
+              <span class="inline-block mb-4 text-xs font-semibold tracking-wider text-cyan-400 uppercase">
+                Featured Project
+              </span>
+            `
+            : ""
+        }
+
+        <h3 class="text-2xl font-semibold mb-4">
+          ${project.title}
+        </h3>
+
+        <p class="text-gray-300 leading-relaxed mb-6">
+          ${project.description}
+        </p>
+
+        <!-- Technologies -->
+        <div class="flex flex-wrap gap-3 mb-8">
+          ${techList}
+        </div>
+
+        <!-- Links -->
+        <div class="flex items-center gap-6">
+
+          <a
+            href="${project.github}"
+            target="_blank"
+            class="text-cyan-400 hover:text-cyan-300 transition"
+          >
+            GitHub →
+          </a>
+
+          ${
+            project.demo !== "#"
+              ? `
+                <a
+                  href="${project.demo}"
+                  target="_blank"
+                  class="text-cyan-400 hover:text-cyan-300 transition"
+                >
+                  Live Demo →
+                </a>
+              `
+              : ""
+          }
+
+        </div>
+
+      </div>
+
     </div>
   `;
 });
