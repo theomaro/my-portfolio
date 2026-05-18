@@ -1,13 +1,8 @@
-const skills = [
-  "Python",
-  "Django",
-  "JavaScript",
-  "React",
-  "HTML5",
-  "CSS3",
-  "MySQL",
-  "Git & GitHub",
-];
+const skills = {
+  backend: ["Python", "Django", "MySQL", "REST APIs"],
+  frontend: ["JavaScript", "TypeScript", "React", "HTML5", "CSS3"],
+  tools: ["Git & GitHub", "Responsive Design"],
+};
 
 const projects = [
   {
@@ -103,10 +98,28 @@ const courses = [
 // Skills
 const skillsContainer = document.getElementById("skills-container");
 
-skills.forEach((skill) => {
+Object.entries(skills).forEach(([category, items]) => {
+  const skillsList = items
+    .map(
+      (skill) => `
+        <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm">
+          ${skill}
+        </span>
+      `,
+    )
+    .join("");
+
   skillsContainer.innerHTML += `
-    <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-blue-500 transition">
-      <h3 class="text-lg font-semibold">${skill}</h3>
+    <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-cyan-500/30 transition">
+
+      <h3 class="text-lg font-semibold capitalize mb-4 text-cyan-400">
+        ${category}
+      </h3>
+
+      <div class="flex flex-wrap gap-2">
+        ${skillsList}
+      </div>
+
     </div>
   `;
 });
