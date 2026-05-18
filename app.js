@@ -11,6 +11,37 @@ const skills = [
 
 const projects = [
   {
+    title: "TeachDocs — Smart Teaching & Lesson Planning Toolkit",
+    description:
+      "A workflow tool helping teachers turn curriculum into effective classroom practice.",
+
+    tech: ["Python", "Django", "MySQL", "TypeScript", "React"],
+
+    github: "https://github.com/theomaro/plan-teach-smart-kit",
+    demo: "#",
+
+    image: "./images/projects/teaching-docs.png",
+
+    featured: true,
+  },
+
+  {
+    title: "Spot.io",
+
+    description:
+      "A web-based job listing application built with Django and MySQL, allowing users to browse and manage job opportunities through a clean and responsive interface.",
+
+    tech: ["Python", "Django", "MySQL", "HTML", "CSS", "JavaScript"],
+
+    github: "https://github.com/theomaro/job-listings",
+    demo: "#",
+
+    image: "./images/projects/jobs-listings.png",
+
+    featured: false,
+  },
+
+  {
     title: "Manage Landing Page",
 
     description:
