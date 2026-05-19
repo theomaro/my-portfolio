@@ -157,27 +157,24 @@ const projects = [
 
 const courses = [
   {
-    title: "Complete Python Mastery",
-    date: "April 2022",
-    skills: ["Python", "OOP", "Data Structures"],
+    title: "Ultimate HTML5 & CSS3 Series",
+    date: "November 2024",
+    skills: ["HTML5", "CSS3", "Responsive Design", "Accessibility"],
   },
-
-  {
-    title: "The Ultimate Django Series",
-    date: "April 2022",
-    skills: ["Django", "REST APIs", "MySQL", "Backend"],
-  },
-
   {
     title: "Ultimate JavaScript: Fundamentals",
     date: "July 2024",
     skills: ["JavaScript", "DOM", "ES6"],
   },
-
   {
-    title: "Ultimate HTML5 & CSS3 Series",
-    date: "November 2024",
-    skills: ["HTML5", "CSS3", "Responsive Design", "Accessibility"],
+    title: "Complete Python Mastery",
+    date: "April 2022",
+    skills: ["Python", "OOP", "Data Structures"],
+  },
+  {
+    title: "The Ultimate Django Series",
+    date: "April 2022",
+    skills: ["Django", "REST APIs", "MySQL", "Backend"],
   },
 ];
 
