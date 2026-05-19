@@ -13,6 +13,10 @@ const projects = [
     tech: [
       { name: "Python", label: `<i class="devicon-python-plain colored"></i>` },
       { name: "Django", label: `<i class="devicon-django-plain"></i>` },
+      {
+        name: "Django REST",
+        label: `<i class="devicon-djangorest-plain colored"></i>`,
+      },
       { name: "MySQL", label: `<i class="devicon-mysql-plain"></i>` },
       {
         name: "TypeScript",
@@ -22,12 +26,52 @@ const projects = [
         name: "React",
         label: `<i class="devicon-react-original colored"></i>`,
       },
+      {
+        name: "React Router",
+        label: `<i class="devicon-reactrouter-plain colored"></i>`,
+      },
     ],
 
     github: "https://github.com/theomaro/plan-teach-smart-kit",
     demo: "#",
 
     image: "./images/projects/teaching-docs.png",
+
+    featured: true,
+  },
+
+  {
+    title: "ResumeX",
+    description:
+      "A modern web application that allows users to build, customize, and export professional resumes tailored to the Tanzanian job market and education system.",
+
+    tech: [
+      {
+        name: "React",
+        label: `<i class="devicon-react-original colored"></i>`,
+      },
+      {
+        name: "Vite",
+        label: `<i class="devicon-vitejs-plain colored"></i>`,
+      },
+      {
+        name: "React Router",
+        label: `<i class="devicon-reactrouter-plain colored"></i>`,
+      },
+      {
+        name: "TailwindCSS",
+        label: `<i class="devicon-tailwindcss-original"></i>`,
+      },
+      {
+        name: "TypeScript",
+        label: `<i class="devicon-typescript-plain colored"></i>`,
+      },
+    ],
+
+    github: "https://github.com/theomaro/resume-builder-ui",
+    demo: "https://resume-builder-ui-jet.vercel.app/",
+
+    image: "./images/projects/resume.png",
 
     featured: true,
   },
