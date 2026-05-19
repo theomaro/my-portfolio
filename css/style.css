@@ -1,0 +1,19 @@
+.tech-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech-icon i {
+  font-size: 1.15rem;
+  color: #d1d5db;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+  cursor: pointer;
+}
+
+.tech-icon:hover i {
+  transform: translateY(-2px) scale(1.12);
+}

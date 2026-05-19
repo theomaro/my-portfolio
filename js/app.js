@@ -10,7 +10,19 @@ const projects = [
     description:
       "A workflow tool helping teachers turn curriculum into effective classroom practice.",
 
-    tech: ["Python", "Django", "MySQL", "TypeScript", "React"],
+    tech: [
+      { name: "Python", label: `<i class="devicon-python-plain colored"></i>` },
+      { name: "Django", label: `<i class="devicon-django-plain"></i>` },
+      { name: "MySQL", label: `<i class="devicon-mysql-plain"></i>` },
+      {
+        name: "TypeScript",
+        label: `<i class="devicon-typescript-plain colored"></i>`,
+      },
+      {
+        name: "React",
+        label: `<i class="devicon-react-original colored"></i>`,
+      },
+    ],
 
     github: "https://github.com/theomaro/plan-teach-smart-kit",
     demo: "#",
@@ -26,7 +38,17 @@ const projects = [
     description:
       "A web-based job listing application built with Django and MySQL, allowing users to browse and manage job opportunities through a clean and responsive interface.",
 
-    tech: ["Python", "Django", "MySQL", "HTML", "CSS", "JavaScript"],
+    tech: [
+      { name: "Python", label: `<i class="devicon-python-plain colored"></i>` },
+      { name: "Django", label: `<i class="devicon-django-plain"></i>` },
+      { name: "MySQL", label: `<i class="devicon-mysql-plain"></i>` },
+      { name: "HTML5", label: `<i class="devicon-html5-plain colored"></i>` },
+      { name: "CSS3", label: `<i class="devicon-css3-plain colored"></i>` },
+      {
+        name: "JavaScript",
+        label: `<i class="devicon-javascript-plain colored"></i>`,
+      },
+    ],
 
     github: "https://github.com/theomaro/job-listings",
     demo: "#",
@@ -42,7 +64,17 @@ const projects = [
     description:
       "A responsive landing page challenge from Frontend Mentor focused on layout structuring, responsive design, and reusable UI sections.",
 
-    tech: ["HTML", "Tailwind CSS", "TypeScript"],
+    tech: [
+      { name: "HTML5", label: `<i class="devicon-html5-plain colored"></i>` },
+      {
+        name: "TailwindCSS",
+        label: `<i class="devicon-tailwindcss-original colored"></i>`,
+      },
+      {
+        name: "TypeScript",
+        label: `<i class="devicon-typescript-plain colored"></i>`,
+      },
+    ],
 
     github: "https://github.com/theomaro/manage-landing-page/",
     demo: "https://theomaro.github.io/manage-landing-page/",
@@ -58,7 +90,17 @@ const projects = [
     description:
       "A responsive product landing page built as a Frontend Mentor challenge with interactive UI sections and responsive layouts.",
 
-    tech: ["HTML", "Tailwind CSS", "TypeScript"],
+    tech: [
+      { name: "HTML5", label: `<i class="devicon-html5-plain colored"></i>` },
+      {
+        name: "TailwindCSS",
+        label: `<i class="devicon-tailwindcss-original colored"></i>`,
+      },
+      {
+        name: "TypeScript",
+        label: `<i class="devicon-typescript-plain colored"></i>`,
+      },
+    ],
 
     github: "https://github.com/theomaro/bookmark-landing-page/",
     demo: "https://the-bookmark-landing-page.netlify.app/",
@@ -131,10 +173,37 @@ projects.forEach((project) => {
   const techList = project.tech
     .map(
       (tech) => `
-        <span class="bg-gray-800 text-sm px-3 py-1 rounded-full text-gray-300">
-          ${tech}
+      <div class="tech-icon group relative">
+        ${tech.label}
+
+        <span
+          class="
+            absolute
+            left-1/2
+            -translate-x-1/2
+            top-12
+            px-2
+            py-1
+            text-xs
+            rounded-md
+            bg-gray-800
+            text-white
+            opacity-0
+            pointer-events-none
+            transition-all
+            duration-200
+            group-hover:opacity-100
+            group-hover:top-10
+            whitespace-nowrap
+            shadow-lg
+            border
+            border-gray-700
+          "
+        >
+          ${tech.name}
         </span>
-      `,
+      </div>
+    `,
     )
     .join("");
 
@@ -179,7 +248,7 @@ projects.forEach((project) => {
         </p>
 
         <!-- Technologies -->
-        <div class="flex flex-wrap gap-3 mb-8">
+        <div class="flex flex-wrap gap-5 mb-8 items-center">
           ${techList}
         </div>
 
