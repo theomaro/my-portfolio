@@ -155,6 +155,19 @@ const projects = [
   },
 ];
 
+const educations = [
+  {
+    title: "Postigraduate Diploma in Computer Science",
+    institution: "University of Dodoma",
+    date: "2024 - 2025",
+  },
+  {
+    title: "BSc. Education",
+    institution: "Sokoine University of Agriculture",
+    date: "2013 - 2016",
+  },
+];
+
 const courses = [
   {
     title: "Ultimate HTML5 & CSS3 Series",
@@ -317,6 +330,64 @@ projects.forEach((project) => {
               `
               : ""
           }
+
+        </div>
+
+      </div>
+
+    </div>
+  `;
+});
+
+// Education
+const educationContainer = document.getElementById("education-container");
+
+educations.forEach((edu) => {
+  educationContainer.innerHTML += `
+    <div
+      class="
+        relative
+        bg-gray-900
+        border
+        border-gray-800
+        rounded-3xl
+        p-6
+        hover:border-cyan-500/30
+        transition
+        overflow-hidden
+      "
+    >
+
+      <!-- Accent Line -->
+      <div class="absolute left-0 top-0 h-full w-1 bg-cyan-500/70"></div>
+
+      <div class="pl-4">
+
+        <div class="flex items-start justify-between gap-4 flex-wrap">
+
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-1">
+              ${edu.title}
+            </h3>
+
+            <p class="text-gray-400">
+              ${edu.institution}
+            </p>
+          </div>
+
+          <span
+            class="
+              text-sm
+              text-cyan-400
+              bg-cyan-500/10
+              px-3
+              py-1
+              rounded-full
+              whitespace-nowrap
+            "
+          >
+            ${edu.date}
+          </span>
 
         </div>
 
